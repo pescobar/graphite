@@ -17,7 +17,6 @@ mmpmon_path = '/usr/lpp/mmfs/bin/mmpmon'
 # Carbon
 CARBON_SERVER='10.1.0.5'
 CARBON_PORT=2003
-delay=60
 
 # We use this name when inserting stats to graphite so we can classify the 
 # data for the different gpfs environments
