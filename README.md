@@ -1,3 +1,6 @@
+AN UPDATED VERSION OF THIS SCRIPT WHICH WRITES DIRECTLY TO INFLUXDB USING THE LINE PROTOCOL IS AVAILABLE HERE: https://github.com/pescobar/influxdb
+
+
 # graphite
 
 Some scripts to insert performance data to graphite and then plot with grafana.
