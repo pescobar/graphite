@@ -22,6 +22,9 @@ If you are inserting these metrics to influxdb using the graphite input plugin y
 
 To debug the script comment out the line "print message" at the end of main() function.
 
+This is what you can get in grafana:
+
+![alt tag](https://raw.githubusercontent.com/pescobar/graphite/master/screenshots/sge-grafana-screenshot.png)
 
 ## gpfs-stats.py
 
