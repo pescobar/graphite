@@ -18,6 +18,7 @@ If you are inserting these metrics to influxdb using the graphite input plugin y
      "sge.bc2.queue.* sge.cluster.q.queue.measurement",
      "sge.bc2.project.* sge.cluster.p.project.measurement",
   ]
+```
 
 To debug the script comment out the line "print message" at the end of main() function.
 
