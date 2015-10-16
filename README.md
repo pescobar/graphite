@@ -4,7 +4,7 @@
 
 Some scripts to insert performance data to graphite and then plot with grafana.
 
-## ge-qstat-parser.py
+## sge-qstat-parser.py
 
 Parse the xml output of qstat and qhost to generate metrics in graphite format. 
 
