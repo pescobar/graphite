@@ -1,11 +1,30 @@
-AN UPDATED VERSION OF THIS SCRIPT WHICH WRITES DIRECTLY TO INFLUXDB USING THE LINE PROTOCOL IS AVAILABLE HERE: https://github.com/pescobar/influxdb
 
 
 # graphite
 
 Some scripts to insert performance data to graphite and then plot with grafana.
 
+## ge-qstat-parser.py
+
+Parse the xml output of qstat and qhost to generate metrics in graphite format. 
+
+If you are inserting these metrics to influxdb using the graphite input plugin you will need this in your influxdb config file (bc2 is the content of variable "cluster_name" in the script) :
+
+```
+[[graphite]]
+  templates = [
+     "sge.bc2.total.* sge.cluster.total.measurement",
+     "sge.bc2.users.* sge.cluster.users.username.measurement",
+     "sge.bc2.queue.* sge.cluster.q.queue.measurement",
+     "sge.bc2.project.* sge.cluster.p.project.measurement",
+  ]
+
+To debug the script comment out the line "print message" at the end of main() function.
+
+
 ## gpfs-stats.py
+
+AN UPDATED VERSION OF THIS SCRIPT WHICH WRITES DIRECTLY TO INFLUXDB USING THE LINE PROTOCOL IS AVAILABLE HERE: https://github.com/pescobar/influxdb
 
 I execute this script with cron every minute in each of my gpfs clients. If you prefer to run it in daemon mode, using the python daemon module to daemonize it should be straightforward.
 
